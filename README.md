@@ -472,3 +472,10 @@ module.exports = {
 ## 📄 License
 
 [MIT](https://github.com/Dev-Erf/Dev-Erf.github.io/blob/main/LICENSE)
+
+
+## 📄 inspired by 
+
+<a href="https://github.com/arifszn">
+   Ariful Alam 
+</a>
