@@ -3,10 +3,10 @@
 <p align="center">
 
   <h4 align="center">Easy to use automatic portfolio builder for every GitHub user!</h4>
-  <img src="https://github.com/Dev-Erf/Dev-Erf.github.io/blob/main/public/Screenshot.png" width="35%">
-  <p align="center">
+    <p align="center">
+    <img src="https://github.com/Dev-Erf/Dev-Erf.github.io/blob/main/public/Screenshot.png" width="35%">
 
-  </p>
+    </p>
 
   <p align="center">
     <a href="https://dev-erf.github.io/">View Demo</a>
