@@ -43,7 +43,7 @@ const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, the
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
-    console.log('change theme event is fired')
+    //console.log('change theme event is fired')
 
     typeof window !== 'undefined' &&
       localStorage.setItem('gitprofile-theme', selectedTheme);
@@ -55,14 +55,17 @@ const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, the
 
   const changeBackgrouond = (e, selectedBackground) => {
     e.preventDefault();
-    console.log('change backgound event is fired')
+    //console.log('change backgound event is fired')
     //document.querySelector('html').setAttribute('data-theme', selectedTheme);
     /*
     typeof window !== 'undefined' &&
       localStorage.setItem('gitprofile-theme', selectedTheme);
     */
-    setBackground(selectedBackground);
-    console.log(selectedBackground);
+    setBackground(backgrounds[selectedBackground]({
+      el: myRef.current,
+
+    }));
+    //console.log(selectedBackground);
 
   };
 
@@ -85,7 +88,7 @@ const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, the
               className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
             >
               <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-              <span className="hidden md:inline">background</span>
+              <span className="hidden md:inline">Background</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1792 1792"

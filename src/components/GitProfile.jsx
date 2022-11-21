@@ -69,9 +69,10 @@ const GitProfile = ({ config }) => {
   const [background, setBackground] = useState(() => Object.values(backgrounds)[0]);
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
+
   useEffect(() => {
     if (!vantaEffect) {
-      //console.log(`background inside useEffect is : ${backgound}`)
+      console.log(`background inside useEffect is : {backgound}`)
       setVantaEffect(background({
         el: myRef.current,
 
@@ -133,7 +134,7 @@ const GitProfile = ({ config }) => {
 
   useEffect(() => {
     theme && document.documentElement.setAttribute('data-theme', theme);
-    console.log(`useEffect for theme just executed!`)
+    //console.log(`useEffect for theme just executed!`)
   }, [theme]);
 
   const loadData = useCallback(() => {
