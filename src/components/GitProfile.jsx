@@ -47,16 +47,49 @@ const GitProfile = ({ config }) => {
 
 
 
+  const backgrounds = {
+    'birds':BIRDS ,
+    'cells':CELLS,
+    'clouds':CLOUDS ,
+    'clouds2':CLOUDS2 ,
+    'dots':DOTS ,
+    'globle':GLOBE ,
+    'halo':HALO ,
+    'net':NET ,
+    'rings':RINGS ,
+    'ripple':RIPPLE ,
+    'topology':TOPOLOGY ,
+    'trunk':TRUNK ,
+    'waves':WAVES ,
+  }
 
 
 
 
-
+  const [background, setBackground] = useState(() => Object.values(backgrounds)[0]);
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
   useEffect(() => {
     if (!vantaEffect) {
-      setVantaEffect(WAVES({
+      //console.log(`background inside useEffect is : ${backgound}`)
+      setVantaEffect(background({
+        el: myRef.current,
+
+      }))
+    }
+    return () => {
+      if (vantaEffect) vantaEffect.destroy()
+    }
+  }, [vantaEffect, background])
+
+
+
+/*
+  const [vantaEffect, setVantaEffect] = useState(null)
+  const myRef = useRef(null)
+  useEffect(() => {
+    if (!vantaEffect) {
+      setVantaEffect(waves['waves']({
         el: myRef.current,
         mouseControls: true,
         touchControls: true,
@@ -74,11 +107,7 @@ const GitProfile = ({ config }) => {
   }, [vantaEffect])
 
 
-
-
-
-
-
+*/
 
 
 
@@ -104,6 +133,7 @@ const GitProfile = ({ config }) => {
 
   useEffect(() => {
     theme && document.documentElement.setAttribute('data-theme', theme);
+    console.log(`useEffect for theme just executed!`)
   }, [theme]);
 
   const loadData = useCallback(() => {
@@ -212,6 +242,8 @@ const GitProfile = ({ config }) => {
                     <div className="grid grid-cols-1 gap-6">
                       {!sanitizedConfig.themeConfig.disableSwitch && (
                         <ThemeChanger
+                          background={background}
+                          setBackground={setBackground}
                           theme={theme}
                           setTheme={setTheme}
                           loading={loading}

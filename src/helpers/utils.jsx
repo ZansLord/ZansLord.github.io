@@ -1,6 +1,25 @@
 import colors from '../data/colors.json';
 import { hotjar } from 'react-hotjar';
 
+
+
+import BIRDS from 'vanta/dist/vanta.birds.min';
+import CELLS from 'vanta/dist/vanta.cells.min'
+import CLOUDS from 'vanta/dist/vanta.clouds.min'
+import CLOUDS2 from 'vanta/dist/vanta.clouds2.min'
+import DOTS from 'vanta/dist/vanta.dots.min'
+//import FOGS from 'vanta/dist/vanta.fogs.min'
+import GLOBE from 'vanta/dist/vanta.globe.min'
+import HALO from 'vanta/dist/vanta.halo.min'
+import NET from 'vanta/dist/vanta.net.min'
+import RINGS from 'vanta/dist/vanta.rings.min'
+import RIPPLE from 'vanta/dist/vanta.ripple.min'
+import TOPOLOGY from 'vanta/dist/vanta.topology.min'
+import TRUNK from 'vanta/dist/vanta.trunk.min'
+import WAVES from 'vanta/dist/vanta.waves.min'
+
+
+
 export const getInitialTheme = (themeConfig) => {
   if (themeConfig.disableSwitch) {
     return themeConfig.defaultTheme;
@@ -133,6 +152,10 @@ export const sanitizeConfig = (config) => {
     'winter',
     'procyon',
   ];
+
+
+
+
 
   return {
     github: {
