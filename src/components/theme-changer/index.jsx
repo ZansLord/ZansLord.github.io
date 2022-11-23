@@ -1,7 +1,7 @@
 import { AiOutlineControl } from 'react-icons/ai';
 import { skeleton } from '../../helpers/utils';
 import PropTypes from 'prop-types';
-
+import config from '../../../gitprofile.config.js'
 
 
 import BIRDS from 'vanta/dist/vanta.birds.min';
@@ -19,10 +19,11 @@ import TOPOLOGY from 'vanta/dist/vanta.topology.min'
 import TRUNK from 'vanta/dist/vanta.trunk.min'
 import WAVES from 'vanta/dist/vanta.waves.min'
 
+console.log(config['backgroundsArray'])
+const backgrounds = {}
 
 
-
-const backgrounds = {
+const backgroundsOptions = {
   'birds':BIRDS ,
   'cells':CELLS,
   'clouds':CLOUDS ,
@@ -39,11 +40,18 @@ const backgrounds = {
 }
 
 
+
+config['backgroundsArray'].forEach((item, i) => {
+  backgrounds[item] = backgroundsOptions[item]
+});
+
+
+
 const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, themeConfig }) => {
   const changeTheme = (e, selectedTheme) => {
     e.preventDefault();
     document.querySelector('html').setAttribute('data-theme', selectedTheme);
-    //console.log('change theme event is fired')
+    console.log('change theme event is fired')
 
     typeof window !== 'undefined' &&
       localStorage.setItem('gitprofile-theme', selectedTheme);
@@ -55,17 +63,10 @@ const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, the
 
   const changeBackgrouond = (e, selectedBackground) => {
     e.preventDefault();
-    //console.log('change backgound event is fired')
-    //document.querySelector('html').setAttribute('data-theme', selectedTheme);
-    /*
-    typeof window !== 'undefined' &&
-      localStorage.setItem('gitprofile-theme', selectedTheme);
-    */
-    setBackground(backgrounds[selectedBackground]({
-      el: myRef.current,
+    location.reload();
 
-    }));
-    //console.log(selectedBackground);
+    typeof window !== 'undefined' &&
+      localStorage.setItem('gitprofile-Background', selectedBackground);
 
   };
 
@@ -88,7 +89,7 @@ const ThemeChanger = ({ background, setBackground, theme, setTheme, loading, the
               className="btn btn-ghost m-1 normal-case opacity-50 text-base-content"
             >
               <AiOutlineControl className="inline-block w-5 h-5 stroke-current md:mr-2" />
-              <span className="hidden md:inline">Background</span>
+              <span className="hidden md:inline">background</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 1792 1792"
@@ -185,3 +186,4 @@ ThemeChanger.propTypes = {
 };
 
 export default ThemeChanger;
+export {backgrounds};

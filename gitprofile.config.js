@@ -31,7 +31,7 @@ const config = {
     'Python','Machine Learning', 'Image Processing', 'NLP', 'Data Engineering',
     'Express.js',
     'JavaScript',
-    'React.js','Redux.js', 
+    'React.js','Redux.js',
     'Node.js',
     'Nest.js',
     'PostgreSQL',
@@ -48,7 +48,7 @@ const config = {
       to: 'May 2021',
       companyLink: 'https://gardeshgaran1.com/',
     },
- 
+
   ],
   education: [
     {
@@ -78,6 +78,22 @@ const config = {
     id: '',
     snippetVersion: 6,
   },
+  backgroundsArray: [
+    'dots' ,
+    'birds' ,
+    'cells',
+    'clouds' ,
+    'clouds2' ,
+    'dots' ,
+    'globle' ,
+    'halo' ,
+    'net' ,
+    'rings' ,
+    'ripple' ,
+    'topology' ,
+    'trunk' ,
+    'waves' ,
+  ],
   themeConfig: {
     defaultTheme: 'night',
 
@@ -125,6 +141,7 @@ const config = {
       'winter',
       'procyon',
     ],
+
 
     // Custom theme
     customTheme: {

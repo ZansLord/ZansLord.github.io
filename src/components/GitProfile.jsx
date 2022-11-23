@@ -1,21 +1,6 @@
 import axios from 'axios';
 import React, { Fragment, useCallback, useEffect, useState, useRef } from 'react';
-
-import BIRDS from 'vanta/dist/vanta.birds.min';
-import CELLS from 'vanta/dist/vanta.cells.min'
-import CLOUDS from 'vanta/dist/vanta.clouds.min'
-import CLOUDS2 from 'vanta/dist/vanta.clouds2.min'
-import DOTS from 'vanta/dist/vanta.dots.min'
-//import FOGS from 'vanta/dist/vanta.fogs.min'
-import GLOBE from 'vanta/dist/vanta.globe.min'
-import HALO from 'vanta/dist/vanta.halo.min'
-import NET from 'vanta/dist/vanta.net.min'
-import RINGS from 'vanta/dist/vanta.rings.min'
-import RIPPLE from 'vanta/dist/vanta.ripple.min'
-import TOPOLOGY from 'vanta/dist/vanta.topology.min'
-import TRUNK from 'vanta/dist/vanta.trunk.min'
-import WAVES from 'vanta/dist/vanta.waves.min'
-
+import {backgrounds} from './theme-changer/index.jsx'
 import HeadTagEditor from './head-tag-editor';
 import ErrorPage from './error-page';
 import ThemeChanger from './theme-changer';
@@ -45,34 +30,14 @@ const bgColor = 'bg-base-300';
 
 const GitProfile = ({ config }) => {
 
-
-
-  const backgrounds = {
-    'birds':BIRDS ,
-    'cells':CELLS,
-    'clouds':CLOUDS ,
-    'clouds2':CLOUDS2 ,
-    'dots':DOTS ,
-    'globle':GLOBE ,
-    'halo':HALO ,
-    'net':NET ,
-    'rings':RINGS ,
-    'ripple':RIPPLE ,
-    'topology':TOPOLOGY ,
-    'trunk':TRUNK ,
-    'waves':WAVES ,
-  }
-
-
-
-
-  const [background, setBackground] = useState(() => Object.values(backgrounds)[0]);
+  const [background, setBackground] = useState(() => backgrounds[ localStorage.getItem('gitprofile-Background')] || Object.values(backgrounds)[0]);
   const [vantaEffect, setVantaEffect] = useState(null)
   const myRef = useRef(null)
 
+
+
   useEffect(() => {
     if (!vantaEffect) {
-      console.log(`background inside useEffect is : {backgound}`)
       setVantaEffect(background({
         el: myRef.current,
 
@@ -82,35 +47,6 @@ const GitProfile = ({ config }) => {
       if (vantaEffect) vantaEffect.destroy()
     }
   }, [vantaEffect, background])
-
-
-
-/*
-  const [vantaEffect, setVantaEffect] = useState(null)
-  const myRef = useRef(null)
-  useEffect(() => {
-    if (!vantaEffect) {
-      setVantaEffect(waves['waves']({
-        el: myRef.current,
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        zoom:.3
-      }))
-    }
-    return () => {
-      if (vantaEffect) vantaEffect.destroy()
-    }
-  }, [vantaEffect])
-
-
-*/
-
-
 
 
   const [error, setError] = useState(
