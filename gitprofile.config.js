@@ -45,10 +45,16 @@ const config = {
       company: ' Black Team Meme Indonesia ',
       position: 'Admin',
       from: 'July 2018',
-      to: 'Jan 2022',
+      to: 'Now',
       companyLink: 'https://instagram.com/black_team_indonesia',
     },
-
+    {
+      company: ' Elaina-Chan Bot MultiDevice ',
+      position: 'owner',
+      from: '26 Nov 2022',
+      to: 'Now',
+      companyLink: 'wa.me/62895333501279',
+     },
   ],
   education: [
     {
