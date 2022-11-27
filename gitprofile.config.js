@@ -2,7 +2,7 @@
 
 const config = {
   github: {
-    username: 'Dev-Erf', // Your GitHub org/user name. (Required)
+    username: 'ZansLord', // Your GitHub org/user name. (Required)
     sortBy: 'stars', // stars | updated
     limit: 10, // How many projects to display.
     exclude: {
@@ -11,24 +11,24 @@ const config = {
     },
   },
   social: {
-    linkedin: 'etajalli',
-    twitter: 'TajalliErfan',
-    facebook: '',
-    instagram: 'erfan_.tajalli',
+    linkedin: 'ZansLord',
+    twitter: 'Abdul_Zans',
+    facebook: 'Abdul Malik Rizky',
+    instagram: 'black_team_indonesia',
     dribbble: '',
     behance: '',
-    medium: 'tajalli.erfan',
+    medium: '',
     dev: 'deverf',
     stackoverflow: '', // format: userid/username
     website: '',
-    phone: '',
-    email: 'etajalli@mun.ca',
+    phone: '+6285869074622',
+    email: 'abdulzans11@gmail.com',
   },
   resume: {
     fileUrl: '', // Empty fileUrl will hide the `Download Resume` button.
   },
   skills: [
-    'Python','Machine Learning', 'Image Processing', 'NLP', 'Data Engineering',
+    'Python','Machine Learning', 'Image Processing', 'Drawing', 'Data Engineering',
     'Express.js',
     'JavaScript',
     'React.js','Redux.js',
@@ -42,26 +42,26 @@ const config = {
   ],
   experiences: [
     {
-      company: ' Gardeshgaran Shiraz Travel Company ',
-      position: 'Full Stack Engineer',
-      from: 'Dec 2018',
-      to: 'May 2021',
-      companyLink: 'https://gardeshgaran1.com/',
+      company: ' Black Team Meme Indonesia ',
+      position: 'Admin',
+      from: 'July 2018',
+      to: 'Jan 2022',
+      companyLink: 'https://instagram.com/black_team_indonesia',
     },
 
   ],
   education: [
     {
-      institution: 'Memorial University of Newfoundland',
-      degree: 'Master of Computer Engineering',
-      from: '2021',
-      to: '2023',
+      institution: 'SDN JELEKONG',
+      degree: 'Murid',
+      from: '2015',
+      to: '2021',
     },
     {
-      institution: 'apadana institute of higher education ',
-      degree: 'Bachelor of Computer Engineering - Software',
-      from: '2014',
-      to: '2018',
+      institution: 'SMPN 2 BALEENDAH',
+      degree: 'Pelajar',
+      from: '2021',
+      to: 'now',
     },
   ],
   // Display blog posts from your medium or dev account. (Optional)
