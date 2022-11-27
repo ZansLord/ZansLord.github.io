@@ -53,7 +53,7 @@ const config = {
       position: 'owner',
       from: '26 Nov 2022',
       to: 'Now',
-      companyLink: 'wa.me/62895333501279',
+      companyLink: 'https://api.whatsapp.com/send/?phone=62895333501279&text&type=phone_number&app_absent=0',
      },
   ],
   education: [
