@@ -18,9 +18,9 @@ const config = {
     dribbble: '',
     behance: '',
     medium: '',
-    dev: 'deverf',
+    dev: '',
     stackoverflow: '', // format: userid/username
-    website: '',
+    website: 'https://elaina-multidevice.zanslord.repl.co/',
     phone: '+6285869074622',
     email: 'abdulzans11@gmail.com',
   },
