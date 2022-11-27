@@ -19,7 +19,7 @@ const config = {
     behance: '',
     medium: '',
     dev: '',
-    stackoverflow: '', // format: userid/username
+    stackoverflow: '20615525/ZansLord', // format: userid/username
     website: 'https://elaina-multidevice.zanslord.repl.co/',
     phone: '+6285869074622',
     email: 'abdulzans11@gmail.com',
