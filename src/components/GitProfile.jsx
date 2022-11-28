@@ -236,7 +236,7 @@ const GitProfile = ({ config }) => {
                 <div className="card compact bg-base-100 shadow">
                   <a
                     className="card-body"
-                    href="https://github.com/Dev-Erf"
+                    href="https://github.com/ZansLord"
                     target="_blank"
                     rel="noreferrer"
                   >
@@ -246,7 +246,7 @@ const GitProfile = ({ config }) => {
                       ) : (
                         <p className="font-mono text-sm">
                           Made by{' '}
-                          <span className="text-primary">Erfan</span> with
+                          <span className="text-primary">ZansLord</span> with
                           ❤️
                         </p>
                       )}
